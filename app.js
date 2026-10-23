@@ -52,7 +52,7 @@ function tick(now) {
   requestAnimationFrame(tick);
   const dt = Math.min(64, now - (last || now)); last = now;
   lenis?.raf(now);
-  $('.header').classList.toggle('scrolled', scrollY > 10);
+const header = $('.header'); if (header) header.classList.toggle('scrolled', scrollY > 10);
   if (!set) return;
   const r = hero.getBoundingClientRect();
   if (r.bottom < 0) return;
